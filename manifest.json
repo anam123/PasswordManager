@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+
+  "name": "The Vault",
+  "description": "This is your personal password manager",
+  "version": "1.0",
+  "icons": { "16": "assets/images/logo.png",
+           "48": "assets/images/logo.png",
+          "128": "assets/images/logo.png" },
+  "background":{
+    "scripts":["assets/js/popup.js"],
+    "persistent": false
+  },
+  "content_scripts": [{
+    "css": [
+        "assets/css/homepage.css"
+    ],
+    "js": [
+        "assets/js/PasswordGenerator.js",
+        "assets/js/StrengthChecker.js",
+        "assets/js/StorePasswords.js",
+        "assets/js/AutoFill.js"
+    ],
+    "matches": ["*://*/*"]
+  }],
+  "browser_action": {
+    "default_icon": "assets/images/logo.png",
+    "default_popup": "homepage.html"
+  },
+  "permissions": [
+          "storage",
+          "tabs",
+          "activeTab"
+        ]
+}

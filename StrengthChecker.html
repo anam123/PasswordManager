@@ -1,0 +1,23 @@
+<html style="width:300px;">
+	<head>
+		<link rel="stylesheet" type="text/css" href="assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/homepage.css">
+	</head>
+	
+	<body id="AppBody"> 
+		<form id="contact" action="" method="post">
+		    <i class="material-icons"><a href ="homepage.html">home</a></i>
+		    <h3>The Vault</h3>
+		    <h4>Password Strength Checker</h4>
+			
+			<fieldset>
+  				<input id="CheckPassword" placeholder="Enter Password Here" type="password" tabindex="1" required autofocus>
+			</fieldset>
+			<meter max="5" id="password-strength-meter"></meter>
+			<p id="password-strength-text"></p>
+		</form>
+	</body>
+
+	<script type="text/javascript" src="assets/js/StrengthChecker.js"></script>
+	<script type="text/javascript" src="assets/js/zxcvbn.js"></script>
+</html>
